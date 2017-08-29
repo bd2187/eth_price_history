@@ -6,19 +6,29 @@ import fetchData from '../config/api';
 class Eth extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      data: [],
+      error: '',
+      loading: false
+    };
   }
   componentDidMount() {
+    this.setState({ loading: true });
+
     fetchData()
-      .then(response => console.log(response.data.data))
-      .catch(err => console.log(err));
+      .then(response =>
+        this.setState({
+          data: response.data.data,
+          error: '',
+          loading: false
+        })
+      )
+      .catch(err => this.setState({ error: err, loading: false }));
   }
 
   render() {
-    return (
-      <div className="chart">
-        <Line data={null} />
-      </div>
-    );
+    console.log(this.state);
+    return <div className="chart" />;
   }
 }
 
