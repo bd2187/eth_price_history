@@ -2,24 +2,8 @@ import React, { Component } from 'react';
 import { Bar, Line } from 'react-chartjs-2';
 
 class EthChart extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      chartData: {
-        labels: [],
-        datasets: [
-          {
-            label: '',
-            data: [],
-            backgroundColor: ''
-          }
-        ]
-      }
-    };
-  }
   configureChart(arr = []) {
     console.log(arr);
-
     return {
       labels: arr.map(dataObj => dataObj.time),
       datasets: [
@@ -31,7 +15,6 @@ class EthChart extends Component {
       ]
     };
   }
-
   render() {
     return (
       <div>

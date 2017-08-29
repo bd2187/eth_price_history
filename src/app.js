@@ -14,8 +14,9 @@ class App extends Component {
       ethData: [],
       error: '',
       loading: false,
-      category: '1 day'
+      category: '24h'
     };
+    this.changeCategory = this.changeCategory.bind(this);
   }
   componentDidMount() {
     // After component mounts, give state.loading value of true.
@@ -33,11 +34,18 @@ class App extends Component {
       )
       .catch(err => this.setState({ error: err, loading: false }));
   }
+  changeCategory(category) {
+    console.log(category);
+    this.setState({ category });
+  }
   render() {
     return (
       <BrowserRouter>
         <div>
-          <Route path="/" component={Nav} />
+          <Route
+            path="/"
+            component={() => <Nav changeCategory={this.changeCategory} />}
+          />
           <Switch>
             <Route path="/" render={() => <Eth {...this.state} />} />
           </Switch>
@@ -46,4 +54,9 @@ class App extends Component {
     );
   }
 }
+
 render(<App />, document.getElementById('root'));
+
+/*
+  Create a function that changes the category type.
+*/

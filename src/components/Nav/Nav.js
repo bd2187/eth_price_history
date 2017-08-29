@@ -1,29 +1,24 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-function Nav() {
+const categories = ['24h', '1w', '1m', '1y'];
+
+function displayCategories(clickEvent) {
+  return categories.map(function(category, index) {
+    return (
+      <li key={`category_${index}`} onClick={clickEvent.bind(null, category)}>
+        <NavLink exact activeClassName="active" to="/">
+          {category}
+        </NavLink>
+      </li>
+    );
+  });
+}
+
+function Nav({ changeCategory }) {
   return (
     <ul>
-      <li>
-        <NavLink exact activeClassName="active" to="/">
-          {'24h'}
-        </NavLink>
-      </li>
-      <li>
-        <NavLink exact activeClassName="active" to="/">
-          {'1w'}
-        </NavLink>
-      </li>
-      <li>
-        <NavLink exact activeClassName="active" to="/">
-          {'1m'}
-        </NavLink>
-      </li>
-      <li>
-        <NavLink exact activeClassName="active" to="/">
-          {'1y'}
-        </NavLink>
-      </li>
+      {displayCategories(changeCategory)}
     </ul>
   );
 }

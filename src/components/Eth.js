@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Line } from 'react-chartjs-2';
+import React from 'react';
 import fetchData from '../config/api';
 
 import EthChart from './EthChart';
@@ -14,7 +13,3 @@ function Eth({ ethData, error, loading, category }) {
 }
 
 export default Eth;
-
-/*
-  Create a function that changes the category type.
-*/
