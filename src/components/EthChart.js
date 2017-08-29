@@ -33,8 +33,6 @@ class EthChart extends Component {
   }
 
   render() {
-    // console.log(this.props);
-
     return (
       <div>
         <Line data={this.configureChart(this.props.ethData)} />
