@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
-const categories = ['24h', '1w', '1m', '1y'];
+import categories from '../../config/categories';
 
 function displayCategories(clickEvent) {
   return categories.map(function(category, index) {

@@ -7,6 +7,8 @@ import fetchData from './config/api';
 import Eth from './components/Eth';
 import Nav from './components/Nav/Nav';
 
+import { today, week, month, year } from './config/categories';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +16,7 @@ class App extends Component {
       ethData: [],
       error: '',
       loading: false,
-      category: '24h'
+      category: today
     };
     this.changeCategory = this.changeCategory.bind(this);
   }
@@ -35,7 +37,6 @@ class App extends Component {
       .catch(err => this.setState({ error: err, loading: false }));
   }
   changeCategory(category) {
-    console.log(category);
     this.setState({ category });
   }
   render() {
