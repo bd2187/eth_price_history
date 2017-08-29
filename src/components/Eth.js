@@ -3,6 +3,7 @@ import { Line } from 'react-chartjs-2';
 import fetchData from '../config/api';
 
 import EthChart from './EthChart';
+import Nav from './Nav';
 
 class Eth extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Eth extends Component {
     fetchData()
       .then(response =>
         this.setState({
-          ethData: response.data.data.slice().reverse().slice(0, 25).reverse(),
+          ethData: response.data.data.reverse().slice(0, 25).reverse(),
           error: '',
           loading: false
         })
@@ -34,6 +35,7 @@ class Eth extends Component {
     }
     return (
       <div>
+        <Nav />
         <EthChart {...this.state} />
       </div>
     );
