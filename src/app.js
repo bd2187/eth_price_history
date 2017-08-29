@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-const App = () =>
-  <h1>
-    {'ETH Price History'}
-  </h1>;
+import Eth from './components/Eth';
+
+const App = () => {
+  return <Eth />;
+};
 
 render(<App />, document.getElementById('root'));
