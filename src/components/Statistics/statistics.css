@@ -1,0 +1,18 @@
+.statistics {
+  /*background: red;*/
+}
+
+.label {
+  font-size: 1.2em;
+}
+
+.amount {
+  font-size: 2em;
+}
+
+.statsBox {
+  /*background: green;*/
+  color: #fff;
+  text-align: center;
+  margin: 1.5em 0;
+}

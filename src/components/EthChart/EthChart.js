@@ -81,13 +81,10 @@ class EthChart extends Component {
   render() {
     const { ethData, category } = this.props;
     const modifiedData = this.sliceArray(ethData, category);
+    console.log(modifiedData);
     return (
       <div className="chart-box">
-        <Statistics
-          lowestUSD={modifiedData[0]}
-          highestUSD={modifiedData[modifiedData.length - 1]}
-          category={category}
-        />
+        <Statistics modifiedData={modifiedData} category={category} />
         <Line
           data={this.configureChart(modifiedData)}
           options={{
