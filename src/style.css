@@ -40,3 +40,9 @@ html {
     transform: rotate(360deg);
   }
 }
+
+.error-message {
+  color: #fff;
+  text-align: center;
+  margin-top: 3em;
+}

@@ -64,7 +64,3 @@ class App extends Component {
 }
 
 render(<App />, document.getElementById('root'));
-
-/*
-  Create a function that changes the category type.
-*/
