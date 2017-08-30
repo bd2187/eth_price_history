@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
-import { Bar, Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
 import { today, week, month, year } from '../config/categories';
+
+Chart.defaults.global.defaultFontColor = '#FFF';
+const grid = {
+  display: true,
+  gridLines: {
+    display: true,
+    color: '#FFF'
+  }
+};
 
 function convertDate(time) {
   var date = new Date(time);
@@ -16,9 +25,9 @@ class EthChart extends Component {
       labels: arr.map(dataObj => convertDate(dataObj.time)),
       datasets: [
         {
-          label: '',
+          label: 'Price in USD',
           data: arr.map(dataObj => dataObj.usd),
-          backgroundColor: 'green'
+          backgroundColor: 'rgba(25, 229, 173, 0.5)'
         }
       ]
     };
@@ -73,7 +82,14 @@ class EthChart extends Component {
     console.log(this.props);
     return (
       <div>
-        <Line data={this.configureChart(modifiedData)} />
+        <Line
+          data={this.configureChart(modifiedData)}
+          options={{
+            scales: {
+              yAxes: [grid]
+            }
+          }}
+        />
       </div>
     );
   }

@@ -8,6 +8,7 @@ import Eth from './components/Eth';
 import Nav from './components/Nav/Nav';
 
 import { today, week, month, year } from './config/categories';
+import './style.css';
 
 class App extends Component {
   constructor(props) {
@@ -28,8 +29,6 @@ class App extends Component {
     fetchData()
       .then(response =>
         this.setState({
-          // Show 24 hour Ether history by default
-          // ethData: response.data.data.reverse().slice(0, 25).reverse(),
           ethData: response.data.data,
           error: '',
           loading: false
