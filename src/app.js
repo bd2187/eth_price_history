@@ -8,6 +8,7 @@ import Eth from './components/Eth';
 import Nav from './components/Nav/Nav';
 
 import { today, week, month, year } from './config/categories';
+import './normalize.css';
 import './style.css';
 
 class App extends Component {
@@ -45,7 +46,11 @@ class App extends Component {
         <div>
           <Route
             path="/"
-            component={() => <Nav changeCategory={this.changeCategory} />}
+            component={() =>
+              <Nav
+                changeCategory={this.changeCategory}
+                currentCategory={this.state.category}
+              />}
           />
           <Switch>
             <Route path="/" render={() => <Eth {...this.state} />} />

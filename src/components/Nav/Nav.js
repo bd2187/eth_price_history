@@ -1,24 +1,31 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import categories from '../../config/categories';
+import './nav.css';
 
-function displayCategories(clickEvent) {
+function displayCategories(clickEvent, current) {
   return categories.map(function(category, index) {
     return (
-      <li key={`category_${index}`} onClick={clickEvent.bind(null, category)}>
-        <NavLink exact activeClassName="active" to="/">
+      <li
+        className="nav-item"
+        key={`category_${index}`}
+        onClick={clickEvent.bind(null, category)}
+      >
+        <button style={{ color: category == current ? '#19e5ad' : '#FFF' }}>
           {category}
-        </NavLink>
+        </button>
       </li>
     );
   });
 }
 
-function Nav({ changeCategory }) {
+function Nav({ changeCategory, currentCategory }) {
   return (
-    <ul>
-      {displayCategories(changeCategory)}
-    </ul>
+    <div className="nav">
+      <ul>
+        {displayCategories(changeCategory, currentCategory)}
+      </ul>
+    </div>
   );
 }
 
