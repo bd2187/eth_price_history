@@ -8,8 +8,8 @@ import Eth from './components/Eth';
 import Nav from './components/Nav/Nav';
 
 import { today, week, month, year } from './config/categories';
-import './normalize.css';
-import './style.css';
+import '../public/styles/normalize.css';
+import '../public/styles/style.css';
 
 class App extends Component {
   constructor(props) {
