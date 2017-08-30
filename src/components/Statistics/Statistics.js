@@ -23,6 +23,7 @@ function sortUSD(arr) {
 
 function Statistics({ modifiedData, category, currentETHWorth }) {
   const sortedUSDArr = sortUSD(modifiedData);
+  console.log(sortedUSDArr);
   return (
     <div className="statistics">
       <div className="statsBox" id="current-eth-usd">

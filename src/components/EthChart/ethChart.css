@@ -1,3 +1,9 @@
 .chart-box {
   height: 500px;
 }
+
+.eth-usd {
+  color: #fff;
+  text-align: center;
+  margin-bottom: .5em;
+}

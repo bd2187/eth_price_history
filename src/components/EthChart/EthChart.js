@@ -6,6 +6,7 @@ import './ethChart.css';
 import Statistics from '../Statistics/Statistics';
 
 Chart.defaults.global.defaultFontColor = '#FFF';
+
 const grid = {
   display: true,
   gridLines: {
@@ -28,7 +29,7 @@ class EthChart extends Component {
       labels: arr.map(dataObj => convertDate(dataObj.time)),
       datasets: [
         {
-          label: 'Price in USD',
+          label: 'ETH/USD',
           data: arr.map(dataObj => dataObj.usd),
           backgroundColor: 'rgba(25, 229, 173, 0.5)'
         }
@@ -81,7 +82,7 @@ class EthChart extends Component {
   render() {
     const { ethData, category, currentETHWorth } = this.props;
     const modifiedData = this.sliceArray(ethData, category);
-    console.log(modifiedData);
+
     return (
       <div className="chart-box">
         <Statistics
@@ -89,13 +90,17 @@ class EthChart extends Component {
           category={category}
           currentETHWorth={currentETHWorth}
         />
+        <p className="eth-usd">
+          {'ETH/USD'}
+        </p>
         <Line
           data={this.configureChart(modifiedData)}
           options={{
             scales: {
               yAxes: [grid]
             },
-            maintainAspectRatio: false
+            maintainAspectRatio: false,
+            legend: { position: 'bottom' }
           }}
         />
       </div>

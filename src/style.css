@@ -5,12 +5,38 @@
 body,
 html {
   padding: 0;
+  padding-bottom: 12em;
   background-color: #01020f;
   font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
-  /*background: red;*/
   width: 90%;
+  max-width: 1150px;
   margin: 0 auto;
+}
+
+.loading-box {
+  margin: 5em auto;
+  display: flex;
+  justify-content: center;
+}
+
+.loader {
+  border: 8px solid #fff;
+  border-top: 8px solid #19e5ad;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
