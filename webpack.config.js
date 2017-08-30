@@ -2,7 +2,6 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  devtool: 'cheap-module-inline-source-map',
   entry: ['babel-polyfill', './src/app.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),

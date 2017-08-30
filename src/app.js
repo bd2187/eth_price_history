@@ -27,7 +27,7 @@ class App extends Component {
     // After component mounts, give state.loading value of true.
     this.setState({ loading: true });
 
-    // Invoke AJAX request. Change state depending on on response
+    // Invoke AJAX request. Change state depending on response
     fetchData()
       .then(response =>
         this.setState({
