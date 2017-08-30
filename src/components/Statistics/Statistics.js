@@ -32,22 +32,24 @@ function Statistics({ modifiedData, category, currentETHWorth }) {
         <h1>{`$${currentETHWorth.usd}`}</h1>
       </div>
 
-      <div className="statsBox">
-        <h2 className="label">
-          {renderLabel(category, 'low')}
-        </h2>
-        <h2 className="amount">
-          {`$${sortedUSDArr[0]}`}
-        </h2>
-      </div>
+      <div className="mediaQuery">
+        <div className="statsBox">
+          <h2 className="label">
+            {renderLabel(category, 'low')}
+          </h2>
+          <h2 className="amount">
+            {`$${sortedUSDArr[0]}`}
+          </h2>
+        </div>
 
-      <div className="statsBox">
-        <h2 className="label">
-          {renderLabel(category, 'high')}
-        </h2>
-        <h2 className="amount">
-          {`$${sortedUSDArr[sortedUSDArr.length - 1]}`}
-        </h2>
+        <div className="statsBox">
+          <h2 className="label">
+            {renderLabel(category, 'high')}
+          </h2>
+          <h2 className="amount">
+            {`$${sortedUSDArr[sortedUSDArr.length - 1]}`}
+          </h2>
+        </div>
       </div>
     </div>
   );

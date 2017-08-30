@@ -31,7 +31,14 @@
 }
 
 #current-eth-usd h1 {
-  font-size: 4em;
+  font-size: 4.5em;
   font-weight: 700;
   color: #379e47;
+}
+
+@media screen and (min-width: 730px) {
+  .mediaQuery {
+    display: flex;
+    justify-content: space-around;
+  }
 }
