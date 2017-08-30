@@ -3,6 +3,8 @@ import { Line } from 'react-chartjs-2';
 import { today, week, month, year } from '../../config/categories';
 import './ethChart.css';
 
+import Statistics from '../Statistics/Statistics';
+
 Chart.defaults.global.defaultFontColor = '#FFF';
 const grid = {
   display: true,
@@ -75,14 +77,17 @@ class EthChart extends Component {
         return arr.slice().reverse().slice(0, 24).reverse();
     }
   }
+
   render() {
-    const modifiedData = this.sliceArray(
-      this.props.ethData,
-      this.props.category
-    );
-    console.log(this.props);
+    const { ethData, category } = this.props;
+    const modifiedData = this.sliceArray(ethData, category);
     return (
       <div className="chart-box">
+        <Statistics
+          lowestUSD={modifiedData[0]}
+          highestUSD={modifiedData[modifiedData.length - 1]}
+          category={category}
+        />
         <Line
           data={this.configureChart(modifiedData)}
           options={{
