@@ -107,7 +107,15 @@ function EthChart({ ethData, category, currentETHWorth }) {
             yAxes: [grid]
           },
           maintainAspectRatio: false,
-          legend: { position: 'bottom' }
+          legend: { position: 'bottom' },
+          tooltips: {
+            mode: 'index',
+            intersect: false
+          },
+          hover: {
+            mode: 'nearest',
+            intersect: true
+          }
         }}
       />
     </div>
