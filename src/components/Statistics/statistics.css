@@ -16,3 +16,20 @@
   text-align: center;
   margin: 1.5em 0;
 }
+
+#current-eth-usd {
+  /*background: pink;*/
+  /*display: flex;*/
+  justify-content: center;
+}
+
+#current-eth-usd p {
+  /*background: red;*/
+  /*display: flex;
+  align-items: center;*/
+}
+
+#current-eth-usd h1 {
+  font-size: 4em;
+  color: #379e47;
+}

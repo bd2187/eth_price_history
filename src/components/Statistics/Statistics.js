@@ -21,10 +21,17 @@ function sortUSD(arr) {
   return arr.map(item => item.usd).sort((prev, next) => prev - next);
 }
 
-function Statistics({ modifiedData, category }) {
+function Statistics({ modifiedData, category, currentETHWorth }) {
   const sortedUSDArr = sortUSD(modifiedData);
   return (
     <div className="statistics">
+      <div className="statsBox" id="current-eth-usd">
+        <p>
+          {'1 ETH = '}
+        </p>
+        <h1>{`$${currentETHWorth.usd}`}</h1>
+      </div>
+
       <div className="statsBox">
         <h1 className="label">
           {renderLabel(category, 'low')}

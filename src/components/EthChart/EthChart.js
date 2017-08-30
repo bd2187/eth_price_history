@@ -79,12 +79,16 @@ class EthChart extends Component {
   }
 
   render() {
-    const { ethData, category } = this.props;
+    const { ethData, category, currentETHWorth } = this.props;
     const modifiedData = this.sliceArray(ethData, category);
     console.log(modifiedData);
     return (
       <div className="chart-box">
-        <Statistics modifiedData={modifiedData} category={category} />
+        <Statistics
+          modifiedData={modifiedData}
+          category={category}
+          currentETHWorth={currentETHWorth}
+        />
         <Line
           data={this.configureChart(modifiedData)}
           options={{

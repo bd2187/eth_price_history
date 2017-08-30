@@ -18,7 +18,8 @@ class App extends Component {
       ethData: [],
       error: '',
       loading: false,
-      category: today
+      category: today,
+      currentETHWorth: 0
     };
     this.changeCategory = this.changeCategory.bind(this);
   }
@@ -32,7 +33,8 @@ class App extends Component {
         this.setState({
           ethData: response.data.data,
           error: '',
-          loading: false
+          loading: false,
+          currentETHWorth: response.data.data[response.data.data.length - 1]
         })
       )
       .catch(err => this.setState({ error: err, loading: false }));
