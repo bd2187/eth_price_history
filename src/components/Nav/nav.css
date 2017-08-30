@@ -1,12 +1,8 @@
 .nav {
-  border-top: 1px solid #19e5ad;
-  border-bottom: 1px solid #19e5ad;
+  border-top: 0.5px solid #19e5ad;
+  border-bottom: 0.5px solid #19e5ad;
   display: flex;
   justify-content: center;
-}
-
-.nav-item {
-  /*background-color: green;*/
 }
 
 ul {

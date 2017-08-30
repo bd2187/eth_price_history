@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Line } from 'react-chartjs-2';
-import { today, week, month, year } from '../config/categories';
+import { today, week, month, year } from '../../config/categories';
+import './ethChart.css';
 
 Chart.defaults.global.defaultFontColor = '#FFF';
 const grid = {
@@ -81,13 +82,14 @@ class EthChart extends Component {
     );
     console.log(this.props);
     return (
-      <div>
+      <div className="chart-box">
         <Line
           data={this.configureChart(modifiedData)}
           options={{
             scales: {
               yAxes: [grid]
-            }
+            },
+            maintainAspectRatio: false
           }}
         />
       </div>

@@ -6,3 +6,9 @@ body,
 html {
   background-color: #01020f;
 }
+
+.container {
+  /*background: red;*/
+  width: 90%;
+  margin: 0 auto;
+}
