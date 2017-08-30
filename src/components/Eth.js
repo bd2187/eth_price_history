@@ -8,7 +8,7 @@ function Eth({ ethData, error, loading, category }) {
   return ethData.length === 0
     ? null
     : <div>
-        <EthChart ethData={ethData} />
+        <EthChart ethData={ethData} category={category} />
       </div>;
 }
 

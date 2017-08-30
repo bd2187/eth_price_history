@@ -29,7 +29,8 @@ class App extends Component {
       .then(response =>
         this.setState({
           // Show 24 hour Ether history by default
-          ethData: response.data.data.reverse().slice(0, 25).reverse(),
+          // ethData: response.data.data.reverse().slice(0, 25).reverse(),
+          ethData: response.data.data,
           error: '',
           loading: false
         })
