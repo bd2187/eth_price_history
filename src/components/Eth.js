@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import fetchData from '../config/api';
 
 import EthChart from './EthChart/EthChart';
@@ -39,5 +40,13 @@ function Eth({ ethData, error, loading, category, currentETHWorth }) {
 
   return null;
 }
+
+Eth.propTypes = {
+  ethData: PropTypes.array.isRequired,
+  error: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
+  category: PropTypes.string.isRequired,
+  currentETHWorth: PropTypes.object.isRequired
+};
 
 export default Eth;

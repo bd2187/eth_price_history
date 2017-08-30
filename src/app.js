@@ -19,7 +19,7 @@ class App extends Component {
       error: '',
       loading: false,
       category: today,
-      currentETHWorth: 0
+      currentETHWorth: {}
     };
     this.changeCategory = this.changeCategory.bind(this);
   }
@@ -34,12 +34,14 @@ class App extends Component {
           ethData: response.data.data,
           error: '',
           loading: false,
+          // last item in data array is current ETH worth in USD
           currentETHWorth: response.data.data[response.data.data.length - 1]
         })
       )
       .catch(err => this.setState({ error: err, loading: false }));
   }
   changeCategory(category) {
+    // callback function for onClick in Nav component
     this.setState({ category });
   }
   render() {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import categories from '../../config/categories';
 import './nav.css';
@@ -33,5 +34,10 @@ function Nav({ changeCategory, currentCategory }) {
     </div>
   );
 }
+
+Nav.propTypes = {
+  changeCategory: PropTypes.func.isRequired,
+  currentCategory: PropTypes.string.isRequired
+};
 
 export default Nav;
