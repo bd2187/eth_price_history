@@ -58,6 +58,12 @@ class App extends Component {
           />
           <Switch>
             <Route path="/" render={() => <Eth {...this.state} />} />
+            <Route
+              render={() =>
+                <h1 className="not-found">
+                  {'404 Not Found'}
+                </h1>}
+            />
           </Switch>
         </div>
       </BrowserRouter>
