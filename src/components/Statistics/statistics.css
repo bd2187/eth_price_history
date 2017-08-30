@@ -2,12 +2,17 @@
   /*background: red;*/
 }
 
+.label,
+.amount {
+  font-weight: 400;
+}
+
 .label {
   font-size: 1.2em;
 }
 
 .amount {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 .statsBox {
@@ -17,19 +22,16 @@
   margin: 1.5em 0;
 }
 
-#current-eth-usd {
-  /*background: pink;*/
-  /*display: flex;*/
-  justify-content: center;
+.statsBox h2 {
+  margin: .4em 0;
 }
 
-#current-eth-usd p {
-  /*background: red;*/
-  /*display: flex;
-  align-items: center;*/
+#current-eth-usd {
+  justify-content: center;
 }
 
 #current-eth-usd h1 {
   font-size: 4em;
+  font-weight: 700;
   color: #379e47;
 }

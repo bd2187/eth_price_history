@@ -1,8 +1,14 @@
-.nav {
+.navMenu {
   border-top: 0.5px solid #19e5ad;
   border-bottom: 0.5px solid #19e5ad;
   display: flex;
   justify-content: center;
+}
+
+#ethereum {
+  color: #fff;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
 
 ul {
@@ -19,10 +25,12 @@ button {
   display: inline-block;
   color: #fff;
   border: none;
+  transition: all .5s;
 }
 
 button:hover {
-  color: #19e5ad;
+  background: #19e5ad;
+  color: #fff !important;
 }
 
 button:active {

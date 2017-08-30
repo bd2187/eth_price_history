@@ -22,9 +22,14 @@ function displayCategories(clickEvent, current) {
 function Nav({ changeCategory, currentCategory }) {
   return (
     <div className="nav">
-      <ul>
-        {displayCategories(changeCategory, currentCategory)}
-      </ul>
+      <h1 className="container" id="ethereum">
+        {'ethereum'}
+      </h1>
+      <div className="navMenu">
+        <ul>
+          {displayCategories(changeCategory, currentCategory)}
+        </ul>
+      </div>
     </div>
   );
 }

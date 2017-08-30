@@ -33,21 +33,21 @@ function Statistics({ modifiedData, category, currentETHWorth }) {
       </div>
 
       <div className="statsBox">
-        <h1 className="label">
+        <h2 className="label">
           {renderLabel(category, 'low')}
-        </h1>
-        <h1 className="amount">
+        </h2>
+        <h2 className="amount">
           {`$${sortedUSDArr[0]}`}
-        </h1>
+        </h2>
       </div>
 
       <div className="statsBox">
-        <h1 className="label">
+        <h2 className="label">
           {renderLabel(category, 'high')}
-        </h1>
-        <h1 className="amount">
+        </h2>
+        <h2 className="amount">
           {`$${sortedUSDArr[sortedUSDArr.length - 1]}`}
-        </h1>
+        </h2>
       </div>
     </div>
   );

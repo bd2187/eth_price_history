@@ -4,7 +4,9 @@
 
 body,
 html {
+  padding: 0;
   background-color: #01020f;
+  font-family: 'Lato', sans-serif;
 }
 
 .container {
