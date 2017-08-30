@@ -19,4 +19,11 @@
   <li>View the current price of ETH in USD</li>
 </ul>
 
+<h2>Source Code:</h2>
+<ul>
+  <li>Clone repo</li>
+  <li>Install npm packages</li>
+  <li>npm start</li>
+</ul>
+
 ![alt text](https://media.giphy.com/media/iGtBigOFcgwg0/giphy.gif)
